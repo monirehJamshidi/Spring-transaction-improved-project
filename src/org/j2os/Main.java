@@ -11,13 +11,39 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws Exception {
         PersonService service = (PersonService) Spring.getBean("personService");
+//        Person person = Person.builder().name("Monirehhhhhhh").family("Jamshidiiiiiiii").build();
+//        service.save(person);
 
-//        Person person1 = new Person().setName("amirsam").setCarList(Arrays.asList(new Car().setModel("PRIDE"), new Car().setModel("PEYKAN")));
-//        Person person2 = new Person().setName("hasan").setCarList(Arrays.asList(new Car().setModel("S500"), new Car().setModel("207")));
-//
+//        Person person1 = Person.builder().name("Monireh1").family("Jamshidi1").build();
+//        Person person2 = Person.builder().name("Monireh123456789987654321123456").family("Jamshidi1").build();
+//        service.manyJobInSingleMethod(person1,person2);
+
+
+//        service.forceRollbackMethod(Person.builder().name("monireh").family("jamshidi").build());
+
+        //************************
+//        Person person1 = Person.builder()
+//                .name("Monireh")
+//                .family("Jamshidi")
+//                .carList(Arrays.asList(
+//                        Car.builder().model("BMW").build(),
+//                        Car.builder().model("TOYUTA").build()
+//                ))
+//                .build();
+//        Person person2 = Person.builder()
+//                .name("Mahdieh")
+//                .family("Jamshidi")
+//                .carList(Arrays.asList(
+//                        Car.builder().model("BENZ").build(),
+//                        Car.builder().model("HUNDAI").build()
+//                ))
+//                .build();
+
+//        //save
 //        service.save(person1);
 //        service.save(person2);
 
+        //receive und print
         List<Person> personList = service.findAll();
         for (Person person : personList) {
             System.out.println(person.getName());
